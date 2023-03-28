@@ -1,0 +1,10 @@
+<h1><%= @task.title %> </h1>
+
+<%= simple_form_for @task do |f| %>
+  <%= f.input :title, placeholder: 'Task title' %>
+  <%= f.input :details, placeholder: 'Task details' %>
+    <%= f.check_box :completed %> completed?
+  <%= f.submit class: 'btn btn-flat' %>
+<% end %>
+
+<%= link_to "Back to all the tasks", tasks_path %>
